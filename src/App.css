@@ -16,7 +16,7 @@ body {
 
 main {
   background-color: #F5F5F5;
-  height: 450px;
+  min-height: 450px;
   max-width: 500px;
   border-radius: 10px;
   padding: 50px;
@@ -45,11 +45,24 @@ main {
   grid-template: auto auto / repeat(5, 1fr);
   gap: 20px;
   margin-bottom: 15px;
+  transition: all 0.5s;
+}
+
+@media only screen and (max-width: 768px) {
+  .dice-container {
+    gap:10px
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .dice-container {
+    gap: 5px;
+  }
 }
 
 .die-face {
   height: 70px;
-  width: 70px;
+  width: calc(55px + 1vw);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   display: flex;
